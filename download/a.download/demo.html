@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../comment.css"/>
+		<style type="text/css">
+			a {
+				color: #50a3ba;
+				text-decoration: none;
+				font-size: 16px;
+			}
+			#result {
+				color:#e4393c ;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='demo-box'>
+			<div class="demo-content">
+				<ul>
+					<li><b>静态a标签下载：</b><a href="https://github.com/WZOnePiece/study-draggable/archive/master.zip" download="filename.zip">Download file</a></li>
+					<li><b>生成a标签下载：</b><a href="javascript:;" onClick='downLoad()'>下载测试</a></li>					
+				</ul>
+				<div id='result'></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function downLoad () {
+			var isSure=confirm("是否下载")
+		  if (isSure){
+		  	var a = document.createElement('a');
+        var url = 'https://github.com/WZOnePiece/study-draggable/archive/master.zip';
+        var filename = 'download.zip';
+        a.href = url;
+        a.download = filename;
+        a.click();
+        window.URL.revokeObjectURL(url);
+		    document.getElementById('result').innerHTML = "You downLoad OK!"
+		  }
+		  else{
+		    document.getElementById('result').innerHTML = "You pressed Cancel!"
+		  }
+		}
+		
+	</script>
+</html>
