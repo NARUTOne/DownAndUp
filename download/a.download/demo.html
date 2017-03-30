@@ -20,8 +20,9 @@
 		<div class='demo-box'>
 			<div class="demo-content">
 				<ul>
-					<li><b>静态a标签下载：</b><a href="https://github.com/WZOnePiece/study-draggable/archive/master.zip" download="filename.zip">Download file</a></li>
-					<li><b>生成a标签下载：</b><a href="javascript:;" onClick='downLoad()'>下载测试</a></li>					
+					<li><b>静态a标签下载：</b><a href="../download.md" download="download.md">Download file</a></li>
+					<li><b>生成a标签下载：</b><a href="javascript:;" onClick='downLoad()'>下载测试</a></li>
+					<li><b>生成a标签下载文本内容：</b><a href="javascript:;" id='aLink'>下载文本内容测试</a></li>
 				</ul>
 				<div id='result'></div>
 			</div>
@@ -44,6 +45,15 @@
 		    document.getElementById('result').innerHTML = "You pressed Cancel!"
 		  }
 		}
+		function downloadFile (el, fileName, content) {
+        var aLink = document.querySelector(el);
+        var blob = new Blob([content]);//生成blob                
+        aLink.download = fileName;
+        aLink.href = URL.createObjectURL(blob);
+    }
+    document.querySelector('#aLink').addEventListener('click',function () {
+        downloadFile('#aLink', 'hello.txt', '<h1>hello world</h1>');
+    })
 		
 	</script>
 </html>

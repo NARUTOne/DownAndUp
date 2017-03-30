@@ -2,6 +2,8 @@
 
 >**闲言：** 懒懒懒！！！好长时间不写文章了，一直出差魔都，学习一些其他知识开发项目，也时不时的空闲时间深度学习一些前端基础知识。好吧，不找理由，就是懒哇哈哈(✿◡‿◡)。
 
+>demo代码：https://github.com/NARUTOne/DownAndUp.git
+
 > 参考传送门：
 > [http://www.cnblogs.com/voiphudong/p/3284724.html](http://www.cnblogs.com/voiphudong/p/3284724.html)
 >[https://scarletsky.github.io/2016/07/03/download-file-using-javascript/#参考资料](https://scarletsky.github.io/2016/07/03/download-file-using-javascript/#参考资料)
